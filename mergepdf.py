@@ -11,7 +11,7 @@ parser.add_argument(
     help='directory (the working directory by default)')
 parser.add_argument(
     '-f', '--file',
-    help='output file name without path or ending '
+    help='output file name without path or extension '
     '(the working directorys name by default)')
 args = parser.parse_args()
 
