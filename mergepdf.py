@@ -1,7 +1,8 @@
 import argparse
 import os
-from PyPDF2 import PdfFileMerger
 import sys
+
+from PyPDF2 import PdfFileMerger
 
 # Argument Parsing
 parser = argparse.ArgumentParser()
