@@ -8,11 +8,10 @@ from PyPDF2 import PdfFileMerger
 parser = argparse.ArgumentParser()
 parser.add_argument(
     '-d', '--directory',
-    help='directory (the working directory by default)')
+    help='directory (default: working directory)')
 parser.add_argument(
     '-f', '--file',
-    help='output file name without path or extension '
-    '(the working directorys name by default)')
+    help='output file (default: the name of the working directory)')
 args = parser.parse_args()
 
 # Directory to merge files in
@@ -30,6 +29,9 @@ for pdf in files:
         merger.append(fin)
 
 # Save new PDF
-dest_file_name = (args.file or os.path.basename(directory)) + '.pdf'
+dest_file_name = args.file or os.path.basename(directory)
+if dest_file_name.endswith('.pdf') == False:
+    dest_file_name += '.pdf'
 with open(os.path.join(directory, dest_file_name), 'wb') as fout:
     merger.write(fout)
+    

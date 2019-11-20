@@ -4,10 +4,10 @@
 
 The script `mergepdf.py` will merge all PDF-files within the current working directory into a new PDF with the same name as the directory.
 
-| Argument | Description                                |
-| -------- | ------------------------------------------ |
-| `-d`     | source and target directory                |
-| `-f`     | output file name without path or extension |
+| Argument | Description                 |
+| -------- | --------------------------- |
+| `-d`     | source and target directory |
+| `-f`     | output file                 |
 
 ### Install as Linux command
 
