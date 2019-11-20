@@ -13,3 +13,4 @@ The script `mergepdf.py` will merge all PDF-files within the current working dir
 
 - `nano /etc/bash.bashrc` (Ubuntu)
 - Insert new line: `alias mergepdf='python /path/to/this/mergepdf.py'`
+- Example usage `mergepdf -d /anotherPath/ -f 'new file name'`
